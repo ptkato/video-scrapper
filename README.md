@@ -1,0 +1,1 @@
+This is a daft retail store scrapper, I created it because I'm too lazy to check up on the availability of video cards, which with all the pricing craze, keep going out of stock bloody quick.

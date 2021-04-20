@@ -1,0 +1,52 @@
+cabal-version: 3.0
+name:          video-scrapper
+version:       0.1.0.0
+build-type:    Simple
+license:       MIT
+
+extra-source-files:
+    README.md
+    shell.nix
+    retailers/*
+
+library
+    hs-source-dirs: src
+
+    exposed-modules: 
+        Requisitioner,
+        Scrapper,
+        Types
+        
+    other-extensions:
+        OverloadedStrings
+        RecordWildCards
+
+    build-depends:
+        base,
+        bytestring,
+        text,
+        parsec,
+        wreq,
+        lens,
+        taggy,
+        taggy-lens
+    
+    default-language: Haskell2010
+
+executable video-scrapper-exe
+    main-is: Main.hs
+
+    other-modules:
+        FileParser
+
+    build-depends:
+        base,
+        bytestring,
+        text,
+        wreq,
+        random,
+        video-scrapper
+    
+    hs-source-dirs: exe
+
+    default-language: Haskell2010
